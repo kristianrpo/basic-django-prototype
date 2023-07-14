@@ -1,0 +1,57 @@
+*{
+    background-color: transparent;
+    color:white;
+}
+label{
+    color:white;
+    text-shadow: 1px 1px 0 red, -1px -1px 0 red, 1px -1px 0 red, -1px 1px 0 red;
+    width: fit-content;
+    display: inline;
+    padding: 0vw 3vw 5vw 3vw;
+}
+input{
+    border-radius: 2vw;
+    border:solid white;
+    text-indent: 1vw;
+    padding:1vw;
+    margin:1.5vw;
+    width:20vw;
+}
+input:focus{
+    outline: none;
+}
+.Contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items:left;
+    width: fit-content;
+}
+select{
+    width: 27vw;
+    border: solid white;
+    padding: 1vw;
+    border-radius: 2vw;
+    margin:1.5vw;
+}
+select::-webkit-scrollbar{
+    color:red;
+}
+#nombre_completo_mpleado{
+    margin: 2vw;
+}
+input[type="submit"]{
+    text-indent: 0;
+    background-color: red;
+    color:black;
+    width: fit-content;
+    align-self: center;
+}
+.contenedor_global{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+select{
+    background-color: black;
+}

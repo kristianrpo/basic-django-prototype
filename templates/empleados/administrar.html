@@ -45,7 +45,8 @@
                     {{i.departamento.nombre_departamento}}
                 </td>
                 <td>
-                    <a href = "{%url 'empleado_app:Detallado' i.id%}">VER</a>
+                    <a href = "{%url 'empleado_app:editar' i.id%}">EDITAR </a> |
+                    <a href = "{%url 'empleado_app:eliminar' i.id%}">ELIMINAR</a>
                 </td>
             </tr>
             {% endfor %}

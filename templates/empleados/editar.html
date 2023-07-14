@@ -1,0 +1,19 @@
+{%extends 'base.html'%} {%load static%} {%block configuraciones%}
+<link href="{%static 'css/empleados/editar.css'%}" rel="stylesheet" />
+{%endblock configuraciones%} {%block contenido%}
+<br />
+<form method="POST">
+  {%csrf_token%}
+  <div class="contenedor_global">
+    <div class="Contenedor">
+      <span> <label>Nombre.</label>{{form.nombre_empleado}} </span>
+      <span> <label>Apelli.</label>{{form.apellido_empleado}} </span>
+      <span> <label>Trabaj.</label>{{form.trabajo_empleado}} </span>
+      <span> <label>Depart.</label>{{form.departamento}} </span>
+      <span> <label>Habili.</label>{{form.habilidad}} </span>
+      <span> <label>Comple.</label>{{form.nombre_completo_mpleado}} </span>
+      <input type="submit" value="Enviar" />
+    </div>
+  </div>
+</form>
+{%endblock contenido%}
