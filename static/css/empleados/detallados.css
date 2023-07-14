@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ajusta la altura según tus necesidades */
+  }
+  
+.square {
+    width: 600px; /* Ajusta el ancho según tus necesidades */
+    height: 600px; /* Ajusta la altura según tus necesidades */
+    background-color: white; /* Ajusta el color según tus necesidades */
+    border-radius: 20px;
+    border: solid 5px red;
+    display: flex;
+    align-items:center;
+    justify-content:initial;
+    flex-direction: column;
+
+  }
+
+.imagen_empleado{
+    max-height: 200px;
+    border-radius: 100px;
+    border:solid 5px black;
+    box-shadow: 20px 20px rgba(7, 16, 10,.6);
+    display: block;
+    margin-bottom: 30%;
+}

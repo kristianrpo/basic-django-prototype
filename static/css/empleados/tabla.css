@@ -1,0 +1,91 @@
+table{
+    color:white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    border: solid 2px rgb(175, 173, 173);
+    border-collapse: collapse;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+table th,tr,td{
+    width:100vh;
+    height: 5vh;
+    text-align: left;
+    border: solid 2px rgb(175, 173, 173);
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+tr:nth-child(even){
+    background-color: black;
+    color:white
+}
+tr:nth-child(odd){
+    background-color: white;
+    color:black
+}
+h1{
+    color:white
+}
+.busqueda{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin:10px;
+}
+.caja_busqueda{
+    background-color: transparent;
+    border:none;
+    border-bottom: 2px solid white;
+    border-radius: 2px;
+    width: 40vw;
+    color:white;
+    padding:5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.boton_buscar{
+    color:white;
+    background-color: transparent;
+    border:none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 5px;
+}
+.boton_buscar:hover{
+    background-color: rgb(175, 173, 173);
+    border-radius: 10px;
+}
+a{
+    color:red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.pagina{
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+ul{
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: ROW;
+    list-style-type: none;
+    justify-content: center;
+}
+ul a{
+    margin: 5px;
+    background-color: white;
+    text-decoration: none;
+    padding: 5px;
+    COLOR:black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    
+}
+.pagina_actual{
+    background-color: red;
+}
+
+.contenedor_global{
+    margin:30px;
+}

@@ -1,0 +1,82 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block configuraciones%}
+<link href = "{%static 'css/empleados/tabla.css'%}" rel = "stylesheet"/>
+{%endblock configuraciones%}
+{%block administrar%}
+<div>
+    <a href = "#" style = "color:red">Administrar</a>
+</div>
+{%endblock administrar%}
+{%block contenido%}
+<br/>
+<div class = "busqueda">
+    <form method = "GET">
+        <input type = "text" class = "caja_busqueda" placeholder = "Nombre empleado" id = "nombre" name = "nombre">
+        <input type = "submit"/ value = "🔍︎" class = "boton_buscar">
+    </form>
+</div>
+<div class = "contenedor_global">
+    <div>
+        <table>
+            <tr>
+                <th>
+                    NOMBRES
+                </th>
+                <th>
+                    APELLIDOS
+                </th>
+                <th>
+                    DEPARTAMENTO
+                </th>
+                <th>
+                    ACCION
+                </th>
+            </tr>
+            {% for i in empleado %}
+            <tr>
+                <td>
+                    {{i.nombre_empleado}}
+                </td>
+                <td>
+                    {{i.apellido_empleado}}
+                </td>
+                <td>
+                    {{i.departamento.nombre_departamento}}
+                </td>
+                <td>
+                    <a href = "{%url 'empleado_app:Detallado' i.id%}">VER</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div class = "pagina">
+        {%if is_paginated%}
+        <ul>
+            {% if page_obj.has_previous%}
+            <li>
+                <a href = "?page={{page_obj.previous_page_number}}"><<</a>
+            </li>
+            {%endif%}
+            {% for pagina in paginator.page_range%}
+            {% if pagina == page_obj.number %}
+            <li>
+                <a href = "?page={{pagina}}" class = "pagina_actual">{{pagina}}</a>
+            </li>
+            {%else%}
+            <li>
+                <a href = "?page={{pagina}}">{{pagina}}</a>
+            </li>
+            {% endif%}
+            {%endfor%}
+            {% if page_obj.has_next%}
+            <li>
+                <a href = "?page={{page_obj.next_page_number}}">>></a>
+            </li>
+            {%endif%}
+        </ul>
+        {%endif%}
+    </div>
+    {%endblock contenido%}
+</div>

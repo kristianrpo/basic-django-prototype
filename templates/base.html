@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %}{% endblock titulo %}</title>
+    <link href = "{%static 'css/general/nav_bar.css'%}" rel = "stylesheet"/>
+    {%block configuraciones%}{% endblock%}
+</head>
+<body>
+    <div class = "nav">
+        <div>
+            <a href = "/empleados">Empleados</a><br/>
+        </div>
+        <div>
+            <a href = "/departamento">Departamentos</a><br/>
+        </div>
+        <div>
+            <a href = "/">Inicio</a> <br/>
+        </div>
+        {%block administrar%}{%endblock administrar%}
+    </div>
+    {%block contenido%}{%endblock contenido%}
+</body>
+</html>

@@ -1,0 +1,42 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+}
+.caja_texto{
+    background-color: white;
+    border-radius: 10px;
+    max-width: 400px;
+    text-align: justify;
+    margin: 10px;
+}
+.caja_texto p{
+    padding:15px;
+}
+.caja_texto_2{
+    background-color: white;
+    border-radius: 10px;
+    max-width: 400px;
+    text-align: CENTER;
+    margin: 10px;
+    text-transform: uppercase;
+}
+.contenedor_grande{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+.titulo_final{
+    background-color: red;
+    margin-top: 40PX;
+}
+.titulo_final:hover{
+    background-color: white;
+}
+.titulo_final h1{
+    color:white;
+    text-align: center;
+}
+.titulo_final h1:hover{
+    color:black
+}

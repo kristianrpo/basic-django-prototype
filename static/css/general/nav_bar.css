@@ -1,0 +1,30 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-color: black;
+}
+.nav{
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 5px 5px rgba(242, 245, 243, 0.5);
+}
+.nav div{
+    padding: 10px;
+    margin: 5px;
+}
+.nav div:hover{
+    background-color: rgba(0,0,0,.4);
+    border-radius: 10PX;
+}
+.nav a{
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+}

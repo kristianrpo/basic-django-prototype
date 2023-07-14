@@ -1,0 +1,36 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block configuraciones%}
+<link href = "{%static 'css/empleados/tabla.css'%}" rel = "stylesheet"/>
+{%endblock configuraciones%}
+{%block contenido%}
+<div class = "contenedor_global">
+    <div>
+        <table>
+            <tr>
+                <th>
+                    DEPARTAMENTO
+                </th>
+                <th>
+                    PSEUDONIMO
+                </th>
+                <th>
+                    EMPLEADOS
+                </th>
+            </tr>
+            {% for i in departamento%}
+            <tr>
+                <td>
+                    {{i.nombre_departamento}}
+                </td>
+                <td>
+                    {{i.nombre_corto_departamento}}
+                </td>
+                <td>
+                    <a href = "{%url 'departamento_app:filtro' i.nombre_corto_departamento%}">VER</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+{%endblock contenido%}
