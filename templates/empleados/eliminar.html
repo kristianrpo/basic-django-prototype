@@ -1,0 +1,13 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block configuraciones%}
+<link href = "{%static 'css/empleados/eliminar.css'%}" rel = "stylesheet"/>
+{%endblock configuraciones%}
+{%block contenido%}
+<div class = "contenedor">
+    <h1>¿Realmente desea eliminar al empleado <b>{{empleado.nombre_empleado}} {{empleado.apellido_empleado}}</b>?</h1>
+    <form method = "post">{%csrf_token%}
+        <input type = "submit" value = "SI"/>
+    </form>
+</div>
+{%endblock contenido%}

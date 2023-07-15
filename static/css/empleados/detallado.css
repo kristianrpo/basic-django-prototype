@@ -26,3 +26,8 @@
     display: block;
     margin-bottom: 30%;
 }
+p{
+  color:black;
+  text-align: justify;
+  margin: 0vw 2vw 0vw 2vw;
+}

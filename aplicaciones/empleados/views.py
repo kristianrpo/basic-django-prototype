@@ -1,7 +1,7 @@
 from typing import Any
 from django.db.models.query import QuerySet
 from django.shortcuts import render
-from django.views.generic import ListView,DetailView,DeleteView,UpdateView
+from django.views.generic import ListView,DetailView,DeleteView,UpdateView,CreateView
 from .models import Empleado
 from django.urls import reverse_lazy
 class EmpleadosListView(ListView):
@@ -37,5 +37,20 @@ class EditarEmpleado(UpdateView):
 
 class EliminarEmpleado(DeleteView):
     model = Empleado
-    template_name = "empleados/administrar.html"
+    template_name = "empleados/eliminar.html"
+    success_url = reverse_lazy('empleado_app:administrar')
+    context_object_name = "empleado"
+    def get_queryset(self):
+        palabra_clave = self.request.GET.get("nombre",'')
+        lista = Empleado.objects.filter(nombre_empleado__icontains = palabra_clave)
+        if len(lista)>0:
+            return lista
+        else:
+            return super().get_queryset()
+
+class CrearEmpleado(CreateView):
+    model = Empleado
+    template_name = "empleados/crear.html"
+    success_url = reverse_lazy('empleado_app:generico')
+    fields = ('__all__')
 # Create your views here.
