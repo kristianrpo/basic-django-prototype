@@ -35,9 +35,6 @@
              Ir a la carpeta: cd basic-django-prototipe
         </li>
         <li>
-             Ir a la carpeta: cd basic-django-prototipe
-        </li>
-        <li>
              Instalar entorno virtual:  py -m venv nombre_del_entorno_virutal
         </li>
         <li>
