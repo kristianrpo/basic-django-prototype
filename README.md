@@ -47,9 +47,6 @@
              Crear base de datos en PostgreSQL: CREATE DATABASE nombre_bd;
         </li>
         <li>
-             Crear usuario de base de datos: CREATE USER “nombre_usuario”;;
-        </li>
-        <li>
              Crear usuario de base de datos: CREATE USER “nombre_usuario”;
         </li>
         <li>
